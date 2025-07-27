@@ -1,0 +1,135 @@
+/* Define color variables for reuse */
+:root {
+  --primary: #2563eb;   /* Blue */
+  --dark: #1f2937;      /* Dark gray */
+  --light: #f9fafb;     /* Light background */
+  --accent: #10b981;    /* Green accent */
+}
+
+/* Basic reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page background and text color */
+body {
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Header bar styling */
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+/* Logo/brand name styling */
+header h1 {
+  color: var(--primary);
+}
+
+/* Navigation links styling */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Navigation anchor links */
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+  color: var(--primary);
+}
+
+/* Main content container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Grid layout for courses */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Individual course card styling */
+.course-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+/* Card hover effect */
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Course image */
+.course-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* Card content section */
+.course-card .content {
+  padding: 1rem;
+}
+
+/* Course title inside card */
+.course-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* Progress bar container */
+.progress {
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin: 10px 0;
+}
+
+/* Inner progress indicator (change width dynamically) */
+.progress-bar {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Section for embedded video */
+.video-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Responsive iframe (YouTube video) */
+iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
